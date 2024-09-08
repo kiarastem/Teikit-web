@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teikit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <img src="assets/logo.png" alt="Logo de TEIKIT" class="logo" width="80" height="80">
+      <h1>TEIKIT - Pedidos de Cafetería UCV</h1>
+      <form id="orderForm">
+        <label for="cafeteria">Selecciona la cafetería:</label>
+        <select id="cafeteria" required>
+          <option value="">Elige una cafetería</option>
+          <option value="rubencastro">Cafetería Rubén Castro</option>
+        </select>
+        
+        <label for="date">Fecha de retiro:</label>
+        <input type="date" id="date" required>
+        
+        <label for="time">Hora de retiro:</label>
+        <input type="time" id="time" required>
+      </form>
+      
+      <h2>Productos</h2>
+      <div id="productList"></div>
+      
+      <div id="cartSummary">
+        <p>Productos en el carrito: <span id="cartItemCount">0</span></p>
+        <p>Total: $<span id="cartTotal">0</span></p>
+        <button id="viewCartButton">Ver Carrito</button>
+      </div>
+    </div>
+
+  <script src="script.js"></script>
+    </body>
+</body>
+</html>
