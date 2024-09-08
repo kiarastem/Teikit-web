@@ -7,34 +7,28 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-      <img src="assets/logo.png" alt="Logo de TEIKIT" class="logo" width="80" height="80">
-      <h1>TEIKIT - Pedidos de Cafetería UCV</h1>
-      <form id="orderForm">
-        <label for="cafeteria">Selecciona la cafetería:</label>
-        <select id="cafeteria" required>
-          <option value="">Elige una cafetería</option>
-          <option value="rubencastro">Cafetería Rubén Castro</option>
-        </select>
-        
-        <label for="date">Fecha de retiro:</label>
-        <input type="date" id="date" required>
-        
-        <label for="time">Hora de retiro:</label>
-        <input type="time" id="time" required>
-      </form>
+  <div class="container">
+    <img src="assets/logo.png" alt="Teikit" class="logo">
+    <h1>Teikit</h1>
+    <h2>Pedidos de Cafetería UCV</h2>
+    <form id="orderForm">
+      <label for="cafeteria">Selecciona la cafetería:</label>
+      <select id="cafeteria" required>
+        <option value="">Elige una cafetería</option>
+        <option value="rubencastro">Cafetería Rubén Castro</option>
+      </select>
       
-      <h2>Productos</h2>
-      <div id="productList"></div>
+      <label for="date">Fecha de retiro:</label>
+      <input type="date" id="date" required>
+      <p id="dateError" style="color: red; display: none;">La fecha de entrega debe ser de lunes a viernes.</p>
       
-      <div id="cartSummary">
-        <p>Productos en el carrito: <span id="cartItemCount">0</span></p>
-        <p>Total: $<span id="cartTotal">0</span></p>
-        <button id="viewCartButton">Ver Carrito</button>
-      </div>
-    </div>
-
+      <label for="time">Hora de retiro:</label>
+      <input type="time" id="time" required>
+      <p id="timeError" style="color: red; display: none;">La hora de entrega debe estar dentro de los horarios permitidos.</p>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
   <script src="script.js"></script>
-    </body>
 </body>
 </html>
